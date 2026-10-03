@@ -1,0 +1,44 @@
+# Python
+backend/.venv/
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+**/__pycache__/
+**/*.pyc
+
+# Node
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# Environment and local secrets (examples are safe to share)
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Test and coverage output
+.pytest_cache/
+**/.pytest_cache/
+.coverage
+htmlcov/
+
+# Local diagnostics / accidental artifacts
+backend/scratch/
+backend/1.0.0
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user

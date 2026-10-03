@@ -1,0 +1,30 @@
+# GameVoice Translator — Backend Dependencies
+# M1: minimal set only. Each milestone adds what it needs.
+#
+# Install inside the virtual environment:
+#   python -m venv .venv
+#   .venv\Scripts\python.exe -m pip install -r requirements.txt
+
+# Web framework + async server
+fastapi>=0.110.0,<1.0.0
+uvicorn[standard]>=0.29.0,<1.0.0
+
+# Environment variable loading
+python-dotenv>=1.0.0,<2.0.0
+
+# WebSocket support (FastAPI uses this internally)
+websockets>=12.0,<15.0
+
+# M3: Audio decoding — PyAV bundles its own FFmpeg libraries.
+# Install inside .venv only; do NOT install system-wide FFmpeg.
+# Use --prefer-binary to guarantee a pre-built wheel is used.
+av>=19.0.0,<20.0.0
+
+# M5: Text translation — deep-translator uses Google Translate backend.
+# No API key required.  Requires internet access at translation time.
+deep-translator>=1.11.0,<2.0.0
+
+# M-REAL-STT: Real speech-to-text via Gemini API.
+# Requires GEMINI_API_KEY in backend/.env (get a free key at aistudio.google.com).
+# Offline tests use MockSpeechProvider and do NOT require this key.
+google-genai>=1.0.0,<2.0.0
